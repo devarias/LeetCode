@@ -1,37 +1,39 @@
-# [Challenge LeetCode January 13](https://leetcode.com/explore/featured/card/january-leetcoding-challenge-2021/580/week-2-january-8th-january-14th/3603/)
+# [Challenge LeetCode January 13](https://leetcode.com/explore/challenge/card/january-leetcoding-challenge-2021/580/week-2-january-8th-january-14th/3602/)
 
-# Minimum Operations to Reduce X to Zero
+# Boats to Save People
 
-You are given an integer array `nums` and an integer `x`. In one operation, you can either remove the leftmost or the rightmost element from the array `nums` and subtract its value from `x`. Note that this **modifies** the array for future operations.
+The `i`-th person has weight `people[i]`, and each boat can carry a maximum weight of `limit`.
 
-Return the **minimum number** of operations to reduce `x` to **exactly** `0` if it's possible, otherwise, return `-1`.
+Each boat carries at most 2 people at the same time, provided the sum of the weight of those people is at most `limit`.
+
+Return the minimum number of boats to carry every given person.  (It is guaranteed each person can be carried by a boat.)
 
 ### Example 1:
 
 
 ```
-Input: nums = [1,1,4,2,3], x = 5
-Output: 2
-Explanation: The optimal solution is to remove the last two elements to reduce x to zero.
+Input: people = [1,2], limit = 3
+Output: 1
+Explanation: 1 boat (1, 2)
 ```
 
 ### Example 2:
 
 ```
-Input: nums = [5,6,7,8,9], x = 4
-Output: -1
+Input: people = [3,2,2,1], limit = 3
+Output: 3
+Explanation: 3 boats (1, 2), (2) and (3)
 ```
 
 ### Example 3:
 
 ```
-Input: nums = [3,2,20,1,1,3], x = 10
-Output: 5
-Explanation: The optimal solution is to remove the last three elements and the first two elements (5 operations in total) to reduce x to zero.
+Input: people = [3,5,3,4], limit = 5
+Output: 4
+Explanation: 4 boats (3), (3), (4), (5)
 ```
 
-### Constraints:
+### Note:
 
-* `1 <= nums.length <= 105`
-* `1 <= nums[i] <= 104`
-* `1 <= x <= 109`
+* `1 <= people.length <= 50000`
+* `1 <= people[i] <= limit <= 30000`
